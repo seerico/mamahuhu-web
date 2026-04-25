@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mamahuhu — Bar en Gijón</title>
+  <meta name="description" content="Mamahuhu, bar en Natahoyo, Gijón. Cervezas, vinos, tapas y buena compañía. Avda. de Galicia 80." />
+  <meta property="og:title" content="Mamahuhu — Bar en Gijón" />
+  <meta property="og:description" content="Cervezas, vinos, tapas y buena compañía en Natahoyo, Gijón." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Cormorant Garamond (display) + General Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Mamahuhu",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avda. de Galicia 80",
+      "addressLocality": "Gijón",
+      "addressRegion": "Asturias",
+      "postalCode": "33212",
+      "addressCountry": "ES"
+    },
+    "servesCuisine": ["Tapas", "Bebidas"],
+    "openingHours": ["Mo-Su 11:00-02:00"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner">
+      <a href="#inicio" class="nav-logo" aria-label="Mamahuhu inicio">
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mamahuhu logo" class="logo-svg">
+          <text x="50%" y="32" text-anchor="middle" class="logo-text-top" font-family="Cormorant Garamond, serif" font-size="28" font-weight="300" letter-spacing="8" fill="currentColor">MAMA</text>
+          <text x="50%" y="56" text-anchor="middle" class="logo-text-bottom" font-family="Cormorant Garamond, serif" font-size="28" font-weight="300" letter-spacing="8" fill="currentColor">HUHU</text>
+        </svg>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="nav-reserva" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Reservar</button>
+      <button class="nav-burger" id="nav-burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#nosotros" class="mobile-link">Nosotros</a></li>
+        <li><a href="#carta" class="mobile-link">Carta</a></li>
+        <li><a href="#resenas" class="mobile-link">Reseñas</a></li>
+        <li><a href="#eventos" class="mobile-link">Eventos</a></li>
+        <li><a href="#contacto" class="mobile-link">Contacto</a></li>
+        <li><a href="#contacto" class="mobile-link mobile-reserva">Reservar</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg">
+        <img src="img/mamahuhu-hero.jpg" alt="Interior del bar Mamahuhu, Gijón" class="hero-img" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content fade-in">
+        <div class="hero-logo-large">
+          <svg viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mamahuhu">
+            <text x="50%" y="46" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="52" font-weight="300" letter-spacing="14" fill="white">MAMA</text>
+            <text x="50%" y="92" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="52" font-weight="300" letter-spacing="14" fill="white">HUHU</text>
+          </svg>
+        </div>
+        <p class="hero-sub">Bar · Natahoyo · Gijón</p>
+        <div class="hero-ctas">
+          <a href="#carta" class="btn btn-primary">Ver la carta</a>
+          <a href="#contacto" class="btn btn-ghost">Reservar mesa</a>
+        </div>
+      </div>
+      <a href="#nosotros" class="scroll-indicator" aria-label="Bajar">
+        <span class="scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section nosotros" id="nosotros">
+      <div class="container">
+        <div class="nosotros-grid">
+          <div class="nosotros-text fade-in">
+            <span class="section-label">Nuestra historia</span>
+            <h2 class="section-title">Un nombre con historia personal</h2>
+            <p id="cfg-nosotros-texto">Mamahuhu es una palabra china que lo dice todo sin decir nada. Algo así como "más o menos", "tirando", "ni bien ni mal". Para nosotros significa algo mucho más: es el recuerdo de años vividos en China, de culturas que se mezclan, de una familia que nació entre dos mundos. En el barrio de Natahoyo, en Gijón, abrimos las puertas de un bar que no pretende ser el mejor del mundo, solo el mejor rato de tu día. Buena caña, buen vino, buena compañía.</p>
+            <div class="nosotros-datos">
+              <div class="dato">
+                <span class="dato-num">Avda. de Galicia 80</span>
+                <span class="dato-label">Natahoyo, Gijón</span>
+              </div>
+              <div class="dato">
+                <span class="dato-num" id="cfg-horario">11:00 – 02:00</span>
+                <span class="dato-label">Todos los días</span>
+              </div>
+            </div>
+          </div>
+          <div class="nosotros-img-wrap fade-in">
+            <img src="img/mamahuhu-drinks.jpg" alt="Cervezas y vinos en la barra de Mamahuhu" class="nosotros-img" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTA -->
+    <section class="section carta" id="carta">
+      <div class="container">
+        <div class="carta-header fade-in">
+          <span class="section-label">Lo que ofrecemos</span>
+          <h2 class="section-title">La carta</h2>
+          <p class="carta-intro">De la caña al vino, del desayuno a las pizzas de masa madre. Todo lo que hay, siempre actualizado.</p>
+        </div>
+
+        <!-- GRUPO: PARA BEBER -->
+        <div class="carta-grupo fade-in">
+          <h3 class="carta-grupo-titulo">Para beber</h3>
+          <div class="carta-cats-grid">
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/21" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 6h20l-4 18H18L14 6Z"/>
+                  <path d="M18 24v12"/><path d="M30 24v12"/>
+                  <path d="M14 36h20"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Cervezas</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/3" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 6h16v16a8 8 0 0 1-16 0V6Z"/>
+                  <path d="M24 30v10"/>
+                  <path d="M17 40h14"/>
+                  <path d="M16 16h16"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Vinos</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/22" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 14h24v4a12 12 0 0 1-24 0v-4Z"/>
+                  <path d="M24 30v8"/>
+                  <path d="M17 38h14"/>
+                  <circle cx="24" cy="10" r="3"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Vermouths</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/25" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h12l2 10H16L18 8Z"/>
+                  <path d="M16 18v10a8 6 0 0 0 16 0V18"/>
+                  <path d="M21 8v-3"/><path d="M27 8v-3"/>
+                  <path d="M20 38h8"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Cócteles</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/26" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 12h16v4a8 8 0 0 1-8 8 8 8 0 0 1-8-8v-4Z"/>
+                  <path d="M24 24v10"/>
+                  <path d="M18 34h12"/>
+                  <path d="M12 12h4"/><path d="M32 12h4"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Cafés</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- DIVIDER -->
+        <div class="carta-divider fade-in"></div>
+
+        <!-- GRUPO: PARA COMER -->
+        <div class="carta-grupo fade-in">
+          <h3 class="carta-grupo-titulo">Para comer</h3>
+          <div class="carta-cats-grid">
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/10" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="18" width="32" height="16" rx="2"/>
+                  <path d="M8 22h32"/>
+                  <path d="M16 12l4 6"/><path d="M24 10l0 8"/><path d="M32 12l-4 6"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Tostas</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/9" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="14"/>
+                  <circle cx="24" cy="24" r="6"/>
+                  <path d="M24 10v4"/><path d="M24 34v4"/>
+                  <path d="M10 24h4"/><path d="M34 24h4"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Picoteo</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/11" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 36 L24 10 L40 36 Z"/>
+                  <path d="M8 36 Q24 28 40 36"/>
+                  <circle cx="18" cy="28" r="2" fill="currentColor" stroke="none"/>
+                  <circle cx="28" cy="24" r="2" fill="currentColor" stroke="none"/>
+                  <circle cx="24" cy="31" r="2" fill="currentColor" stroke="none"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Pizzas</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/12" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="8" y="20" width="32" height="10" rx="5"/>
+                  <path d="M12 20v-4a4 4 0 0 1 8 0"/>
+                  <path d="M28 20v-4a4 4 0 0 1 8 0"/>
+                  <path d="M8 30h32"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Embutidos</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/13" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="24" cy="28" rx="14" ry="8"/>
+                  <path d="M10 28v4c0 4.4 6.3 8 14 8s14-3.6 14-8v-4"/>
+                  <path d="M16 22 Q20 14 24 20 Q28 14 32 22"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Quesos</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+            <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/category/17" target="_blank" rel="noopener" class="carta-cat-card">
+              <div class="carta-cat-icon-wrap">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 36 Q16 22 24 18 Q32 22 32 36"/>
+                  <path d="M13 36h22"/>
+                  <path d="M20 26 Q24 20 28 26"/>
+                  <path d="M24 18v-4"/>
+                </svg>
+              </div>
+              <span class="carta-cat-nombre">Postres</span>
+              <span class="carta-cat-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA carta completa -->
+        <div class="carta-cta fade-in">
+          <p class="carta-cta-texto">Carta completa con precios, alérgenos y novedades del día</p>
+          <a href="https://smartmenu.agorapos.com/?id=p7h2tgd5#/" target="_blank" rel="noopener" class="btn btn-primary">Ver la carta completa</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- RESEÑAS -->
+    <section class="section resenas" id="resenas">
+      <div class="container">
+        <div class="resenas-header fade-in">
+          <span class="section-label">Lo que dicen</span>
+          <h2 class="section-title">Opiniones reales</h2>
+        </div>
+        <div class="resenas-grid">
+
+          <div class="resena-card fade-in">
+            <div class="resena-estrellas" aria-label="5 estrellas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="resena-texto">
+              "Desde la primera vez que fui la carta me resultó espectacular. Luego está el local que tiene una ambientación singular, la mesa de billar y dardos... Sin olvidar la amable atención de los chic@s del lugar que se llevan un 10."
+            </blockquote>
+            <div class="resena-autor">
+              <span class="resena-nombre">Yohana</span>
+              <span class="resena-via">Google</span>
+            </div>
+          </div>
+
+          <div class="resena-card fade-in">
+            <div class="resena-estrellas" aria-label="5 estrellas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="resena-texto">
+              "Servicio excelente. Un grupo de amigos fuimos a jugar al billar y lo pasamos genial, nos sirvieron rápido y el camarero nos atendió de forma impecable."
+            </blockquote>
+            <div class="resena-autor">
+              <span class="resena-nombre">Manolo</span>
+              <span class="resena-via">Google</span>
+            </div>
+          </div>
+
+          <div class="resena-card fade-in">
+            <div class="resena-estrellas" aria-label="5 estrellas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="resena-texto">
+              "Buena pizarra de vinos con gran variedad, personal amable y sitio de referencia para picar algo."
+            </blockquote>
+            <div class="resena-autor">
+              <span class="resena-nombre">José</span>
+              <span class="resena-via">Google</span>
+            </div>
+          </div>
+
+          <div class="resena-card fade-in">
+            <div class="resena-estrellas" aria-label="5 estrellas">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="resena-texto">
+              "Encantada con el servicio de los camareros, las tostas súper ricas, los desayunos igual de buenos. Decoración súper guapa y terraza genial para el verano."
+            </blockquote>
+            <div class="resena-autor">
+              <span class="resena-nombre">Andrea</span>
+              <span class="resena-via">Google</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA dejar reseña -->
+        <div class="resenas-cta fade-in">
+          <p class="resenas-cta-texto">¿Has venido ya? Nos alegra saberlo.</p>
+          <a href="https://www.google.com/maps/place/Al+Peso+Natahoyo/@43.5402564,-5.6889157,17z/data=!4m8!3m7!1s0xd367d2183186371:0x80bb2870884139cc!8m2!3d43.5402564!4d-5.6889157!9m1!1b1!16s%2Fg%2F11vyq05p_7" target="_blank" rel="noopener" class="btn btn-ghost resenas-btn">
+            Deja tu opinión en Google
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="margin-left:6px;vertical-align:middle;">
+              <path d="M4 10h12M10 4l6 6-6 6"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="section eventos" id="eventos">
+      <div class="container">
+        <div class="eventos-grid">
+          <div class="eventos-text fade-in">
+            <span class="section-label">Celebraciones</span>
+            <h2 class="section-title">Tu evento, a tu manera</h2>
+            <p>¿Cumpleaños, despedida, reunión de empresa, quedada con amigos? En Mamahuhu podemos reservar el espacio para ti. Dinos cuántos sois y qué necesitáis, y lo montamos.</p>
+            <ul class="eventos-lista" role="list">
+              <li>Reserva de espacio privado</li>
+              <li>Menú cerrado a medida</li>
+              <li>Barra libre opcional</li>
+              <li>Grupos desde 10 personas</li>
+            </ul>
+            <a href="#contacto" class="btn btn-primary" style="margin-top: var(--space-8);">Consultar disponibilidad</a>
+          </div>
+          <div class="eventos-deco fade-in">
+            <div class="eventos-cita">
+              <blockquote>
+                "Un sitio de esos en el que siempre apetece quedar."
+              </blockquote>
+              <cite>— El barrio de Natahoyo</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contacto" id="contacto">
+      <div class="container">
+        <div class="contacto-header fade-in">
+          <span class="section-label">Encuéntranos</span>
+          <h2 class="section-title">Ven a vernos</h2>
+        </div>
+        <div class="contacto-grid">
+          <div class="contacto-info fade-in">
+            <div class="info-block">
+              <h3>Dónde estamos</h3>
+              <address>
+                Avda. de Galicia 80<br />
+                Natahoyo, Gijón<br />
+                Asturias
+              </address>
+              <a href="https://maps.google.com/?q=Avda.+de+Galicia+80,+Gijón" target="_blank" rel="noopener" class="mapa-link">Ver en Google Maps →</a>
+            </div>
+            <div class="info-block">
+              <h3>Horario</h3>
+              <p>Lunes a domingo<br /><span id="cfg-horario-2">11:00 – 02:00</span></p>
+            </div>
+            <div class="info-block">
+              <h3>Contacto directo</h3>
+              <a href="tel:+34603016779" class="contacto-tel" id="cfg-tel-link">📞 Llámanos</a>
+              <a href="https://wa.me/34603016779" target="_blank" rel="noopener" class="contacto-wa">💬 WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="contacto-form-wrap fade-in">
+            <form class="contacto-form" id="contacto-form" novalidate>
+              <h3>Reservar o consultar</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="612 345 678" required autocomplete="tel" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="personas">Número de personas</label>
+                  <select id="personas" name="personas" required>
+                    <option value="" disabled selected>¿Cuántos sois?</option>
+                    <option value="1-4">1 – 4 personas</option>
+                    <option value="5-10">5 – 10 personas</option>
+                    <option value="10-20">10 – 20 personas</option>
+                    <option value="20+">Más de 20</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="fecha">Fecha preferida</label>
+                  <input type="date" id="fecha" name="fecha" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">¿Qué necesitáis?</label>
+                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos qué celebráis o qué necesitáis..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Enviar consulta</button>
+              <div class="form-success" id="form-success" aria-live="polite">
+                ¡Mensaje recibido! Os contactamos en breve.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Mapa embed -->
+        <div class="mapa-embed fade-in">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.0!2d-5.6742!3d43.5278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDMxJzQwLjAiTiA1wrA0MCczMS4xIlc!5e0!3m2!1ses!2ses!4v1680000000000!5m2!1ses!2ses"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Mamahuhu en Gijón"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- BANNER EVENTO (controlado desde Notion) -->
+  <div class="evento-banner" id="evento-banner" style="display:none;">
+    <div class="container evento-banner-inner">
+      <span class="evento-banner-icon">★</span>
+      <span class="evento-banner-texto" id="cfg-evento-texto">Este finde: vermut en directo</span>
+      <span class="evento-banner-icon">★</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <svg viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mamahuhu">
+          <text x="50%" y="30" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="300" letter-spacing="7" fill="currentColor">MAMA</text>
+          <text x="50%" y="54" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="300" letter-spacing="7" fill="currentColor">HUHU</text>
+        </svg>
+      </div>
+      <div class="footer-info">
+        <p>Avda. de Galicia 80, Natahoyo · Gijón</p>
+        <p>Lun – Dom · 11:00 – 02:00</p>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 Mamahuhu · Seerico Food S.L.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
