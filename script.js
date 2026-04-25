@@ -75,9 +75,8 @@
         mensaje: form.mensaje.value.trim()
       };
 
-      // Construir mensaje de WhatsApp con la reserva
+      // Construir email con la reserva
       const lineas = [
-        '*Reserva / consulta — Mamahuhu*',
         `Nombre: ${data.nombre}`,
         `Teléfono: ${data.telefono}`,
         `Email: ${data.email}`,
@@ -86,11 +85,12 @@
       if (data.fecha) lineas.push(`Fecha: ${data.fecha}`);
       if (data.mensaje) lineas.push(`Mensaje: ${data.mensaje}`);
 
-      const texto = encodeURIComponent(lineas.join('\n'));
-      const waUrl = `https://wa.me/34603016779?text=${texto}`;
+      const asunto = encodeURIComponent('Reserva / consulta — Mamahuhu');
+      const cuerpo = encodeURIComponent(lineas.join('\n'));
+      const mailto = `mailto:seerico.food@hotmail.com?subject=${asunto}&body=${cuerpo}`;
 
-      // Abrir WhatsApp con el mensaje precargado
-      window.open(waUrl, '_blank', 'noopener');
+      // Abrir cliente de correo con el mensaje precargado
+      window.location.href = mailto;
 
       // Mostrar mensaje de éxito y reset
       if (successMsg) successMsg.classList.add('is-visible');
